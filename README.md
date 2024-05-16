@@ -1,8 +1,9 @@
 # MGWJ_2024
+
 # Project Design Document: Rupestralia(Sujeto a cambios)
 
 -   **Created at**: 04/05/2024
--   **Author**: Guillermo Gutiérrez, Andrés Rafael, Jimmy Sirpa, Adonay Matehuala Corona, 
+-   **Author**: Guillermo Gutiérrez, Andrés Rafael, Jimmy Sirpa, Adonay Matehuala Corona,
 
 ## Project Concept
 
@@ -41,38 +42,39 @@ During the game:
 
 ### 3. Sounds & Effects
 
-| Sonido Ambiental       | Played when                 |
-| ---------------------- | --------------------------- |
-| Desierto               | El nivel del desierto empieza      |
-| Cueva                  | El jugador se encuentra en una cueva (La misma musica solo con efectos de eco [Ejemplo])      |
+| Sonido Ambiental | Played when                                                                              |
+| ---------------- | ---------------------------------------------------------------------------------------- |
+| Desierto         | El nivel del desierto empieza                                                            |
+| Cueva            | El jugador se encuentra en una cueva (La misma musica solo con efectos de eco [Ejemplo]) |
 
-| Particle Effect       | Played when                 |
-| --------------------- | --------------------------- |
-| Particula de tierra   | Cuando el jugador camine    |
+| Particle Effect     | Played when              |
+| ------------------- | ------------------------ |
+| Particula de tierra | Cuando el jugador camine |
 
-|  Enemy Sound          | Played when                 |
-| --------------------- | --------------------------- |
-| Ataque de serpiente   | Cuando la serpiente salte hacia el jugador    |
-| Embestida de Jabali   | Cuando el Jabali corra hacia el jugador       |
+| Enemy Sound         | Played when                                |
+| ------------------- | ------------------------------------------ |
+| Ataque de serpiente | Cuando la serpiente salte hacia el jugador |
+| Embestida de Jabali | Cuando el Jabali corra hacia el jugador    |
 
 ### 4. Animaciones
-| Animation              | Played when                 |
-| ---------------------- | --------------------------- |
-| Idle                   | No hace nada                |
-| Caminar                | when player walks on ground |
-| Salto                  | Cuando presiona space bar   |
 
-| Animaciones Enemigas   | Played when                 | Descripcion                 |
-| -----------------      | -------                     | ---------------------------- |
-| Jabalí Idle            | No ha detectado al jugador  | El jabali estara pastando levantando la cabeza despues de un ratoy moviendose en el lugar.
-| Jabalí Embestir        | Cuando ve al jugador        | Mira al jugador se enoja y embiste hacia el agachando la cabeza, si le da levanta la cabeza, si no simplemente se vuelve a su estado idle
-| Serpiente Idle         | Cuando no detecte al jugador| Estará enrollada y camuflada con el bioma esperando al jugador
-| Serpiente Salto        | Cuando detecta al jugador   | Saltará a dirección del jugador, si no ve al jugador vuelve a su estado de idle
+| Animation | Played when                 |
+| --------- | --------------------------- |
+| Idle      | No hace nada                |
+| Caminar   | when player walks on ground |
+| Salto     | Cuando presiona space bar   |
 
-| Elementos Naturales    | Played when             |
-| ---------------------- | --------------------------- |
-| Viento                 |       |
-| Temperatura            |       |                     
+| Animaciones Enemigas | Played when                  | Descripcion                                                                                                                               |
+| -------------------- | ---------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
+| Jabalí Idle          | No ha detectado al jugador   | El jabali estara pastando levantando la cabeza despues de un ratoy moviendose en el lugar.                                                |
+| Jabalí Embestir      | Cuando ve al jugador         | Mira al jugador se enoja y embiste hacia el agachando la cabeza, si le da levanta la cabeza, si no simplemente se vuelve a su estado idle |
+| Serpiente Idle       | Cuando no detecte al jugador | Estará enrollada y camuflada con el bioma esperando al jugador                                                                            |
+| Serpiente Salto      | Cuando detecta al jugador    | Saltará a dirección del jugador, si no ve al jugador vuelve a su estado de idle                                                           |
+
+| Elementos Naturales | Played when |
+| ------------------- | ----------- |
+| Viento              |             |
+| Temperatura         |             |
 
 ### 5. Gameplay Mechanics
 
@@ -91,11 +93,11 @@ As the game progresses:
 | Guía histórica                   | Muestra información histórica del arte rupestre |
 | Polainas                         | Da resistencia ataques de serpiente             |
 
-| Gameplay mechanic                    | Description                              |
-| ----------------------------------   | ----------------------------------------------- |
-| Restaurar panel (Tipo 1)            | Recuperar las piezas del panel              |
-| Restaurar (Tipo 2)                           | Combinacion de teclas para realizar el tipo de restaruración (Tipo Estratagemas de Helldivers)|
-| Viento                           | Mueve al jugador y al mural lo daña             |
+| Gameplay mechanic        | Description                                                                                    |
+| ------------------------ | ---------------------------------------------------------------------------------------------- |
+| Restaurar panel (Tipo 1) | Recuperar las piezas del panel                                                                 |
+| Restaurar (Tipo 2)       | Combinacion de teclas para realizar el tipo de restaruración (Tipo Estratagemas de Helldivers) |
+| Viento                   | Mueve al jugador y al mural lo daña                                                            |
 
 ### 6. User Interface
 
@@ -110,16 +112,16 @@ As the game progresses:
 
 ## Project Timeline
 
-| Milestone | Due date | Description                                                                     |
-| --------- | -------- | ------------------------------------------------------------------------------- |
-| #1        | 04/05    | Mini Game Jam                                                                   |
-| #2        | 06/05    | Conceptualización                                                               |
-| #3        | 13/05    | Prepoducción                                                                    |
-| #4        | 27/05    | Producción I                                                                    |
-| #5        | 08/06    | Testing                                                                         |
-| #6        | 10/06    | Producción                                                                      |
-| #7        | 24/06    | Postproducción                                                                  |
-| #8        | 30/06    | Entrega final                                                                   |
+| Milestone | Due date | Description       |
+| --------- | -------- | ----------------- |
+| #1        | 04/05    | Mini Game Jam     |
+| #2        | 06/05    | Conceptualización |
+| #3        | 13/05    | Prepoducción      |
+| #4        | 27/05    | Producción I      |
+| #5        | 08/06    | Testing           |
+| #6        | 10/06    | Producción        |
+| #7        | 24/06    | Postproducción    |
+| #8        | 30/06    | Entrega final     |
 
 ### Backlog
 
@@ -130,21 +132,23 @@ As the game progresses:
 | Feature on backlog #3 - not a part of the minimum viable product | mm/dd    |
 
 ### Team Rolls
-| Member team   | Roll            | Description                                                                     |
-| ---------     | --------        | ------------------------------------------------------------------------------- |
-| Agustin       |  Musica         |                                                                                 |
-| Luda          |  Arte           |                                                                                 |
-| Isa           |  Programador #1 |                                                                                 |
-| Guille        |  Programador #2 |                                                                                 |
-| Jimbo         |  Programador #3 |                                                                                 |
-| Andy          |  Programador #4 |                                                                                 |
-| Adonay        |  Investigacion  |                                                                                 |
-| Adonay        |  UX             |                                                                                 |
+
+| Member team | Roll           | Description |
+| ----------- | -------------- | ----------- |
+| Agustin     | Musica         |             |
+| Luda        | Arte           |             |
+| Isa         | Programador #1 |             |
+| Guille      | Programador #2 |             |
+| Jimbo       | Programador #3 |             |
+| Andy        | Programador #4 |             |
+| Adonay      | Investigacion  |             |
+| Adonay      | UX             |             |
 
 ### Herramientas de Desarollo
-| Herramienta | Version      |  Description                                                                            |
-| ---------   | --------     | -------------------------------------------------------------------------------         |
-|Unity        | 2022.3.16    |                                                                                         |
-|FL Studio    |              |Formato: Ogg Estilo: 8bits                                                               |
-|Reaper       |              |Produccion de Sfx                                                                        |
-|Pixel Studio(ejemplo)       | ???          | 16 pixeles|
+
+| Herramienta           | Version   | Description                |
+| --------------------- | --------- | -------------------------- |
+| Unity                 | 2022.3.16 |                            |
+| FL Studio             |           | Formato: Ogg Estilo: 8bits |
+| Reaper                |           | Produccion de Sfx          |
+| Pixel Studio(ejemplo) | ???       | 16 pixeles                 |
