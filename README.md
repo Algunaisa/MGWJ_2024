@@ -3,7 +3,7 @@
 # Project Design Document: Rupestralia(Sujeto a cambios)
 
 -   **Created at**: 04/05/2024
--   **Author**: Guillermo Gutiérrez, Andrés Rafael, Jimmy Sirpa, Adonay Matehuala Corona,
+-   **Author**: Guillermo Gutiérrez, Andrés Rafael, Jimmy Sirpa, Adonay Matehuala Corona, Isabel Flores
 
 ## Project Concept
 
