@@ -60,13 +60,18 @@ public class PlayerMovement : MonoBehaviour
         Debug.Log("MoveWithInput");
         if (Mathf.Abs(xInput) > 0)
         {
-            float increment = xInput * acceleration;
-            float newSpeed = Mathf.Clamp(body.velocity.x + increment, -groundSpeed, groundSpeed);
-            //body.velocity = new Vector2(xInput * groundSpeed, body.velocity.y);//.normalized;
-            body.velocity = new Vector2(newSpeed, body.velocity.y);
+            //float increment = xInput * acceleration;
+            //float newSpeed = Mathf.Clamp(body.velocity.x + increment, -groundSpeed, groundSpeed);
+            //body.velocity = new Vector2(newSpeed, body.velocity.y);
+
+            body.velocity = new Vector2(xInput * groundSpeed, body.velocity.y);//.normalized;
 
             float direction = Mathf.Sign(xInput);// + / -
             transform.localScale = new Vector3(direction, 1, 1);
+        }
+        else
+        {
+            body.velocity = new Vector2(0, body.velocity.y);
         }
     }
 
