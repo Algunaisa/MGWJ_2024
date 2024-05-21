@@ -25,6 +25,9 @@
 
 # Visual Studio cache directory
 .vs/
+.vscode/
+BurstAotSettings_StandaloneLinux64.json
+CommonBurstAotSettings.json
 
 # Gradle cache directory
 .gradle/
