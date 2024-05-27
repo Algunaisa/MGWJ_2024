@@ -1,5 +1,7 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Mathematics;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
@@ -20,6 +22,8 @@ public class PlayerMovement : MonoBehaviour
     public LayerMask groundMask;
 
     public bool grounded;
+
+    public Animator animator;
     // Start is called before the first frame update
     void Start()
     {
@@ -42,11 +46,15 @@ public class PlayerMovement : MonoBehaviour
         CheckGround();
         ApplyFriction();
         MoveWithInput();
+        animator.SetFloat("xVelocity",Math.Abs(body.velocity.x));
+        animator.SetFloat("yVelocity", body.velocity.y);
     }
 
     void CheckGround()
     {
         grounded = Physics2D.OverlapAreaAll(groundCheck.bounds.min, groundCheck.bounds.max, groundMask).Length > 0;
+        //grounded = false;
+        animator.SetBool("isJumping", !grounded);
     }
 
     void GetInput()
