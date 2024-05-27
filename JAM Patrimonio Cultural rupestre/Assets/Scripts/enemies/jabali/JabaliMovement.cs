@@ -28,7 +28,7 @@ public class JabaliMovement : MonoBehaviour
     private IEnumerator EatSomething(float waitTime){
         while(true){
             yield return new WaitForSeconds(waitTime);
-            Debug.Log("Eating something");
+            // Debug.Log("Eating something");
             eating = !eating;
         }
     }
@@ -42,7 +42,7 @@ public class JabaliMovement : MonoBehaviour
         Vector2 locesc = transform.localScale;
         locesc.x *= -1;
         transform.localScale = locesc;
-        Debug.Log(direction);
+        // Debug.Log(direction);
     }
 
     // private void ChangeDirection(Vector2 dir){
