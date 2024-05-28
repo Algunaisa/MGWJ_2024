@@ -6,6 +6,7 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    enum PlayerState { Idle, Running, Airborne }
     public float acceleration;
 
     public float groundSpeed;
@@ -24,7 +25,14 @@ public class PlayerMovement : MonoBehaviour
     public bool grounded;
 
     public Animator animator;
+
+    public float healt;
+    public float healtMAX;
     // Start is called before the first frame update
+    private void Awake()
+    {
+        healtMAX = 1000;
+    }
     void Start()
     {
         //body = GetComponent<Rigidbody2D>();
@@ -33,7 +41,7 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        GetInput();
+        CheckInput();
         HandleJump();
 
 
@@ -44,43 +52,43 @@ public class PlayerMovement : MonoBehaviour
     void FixedUpdate()
     {
         CheckGround();
+        //HandleJump();
+        HandleXMovement();
         ApplyFriction();
-        MoveWithInput();
+
         animator.SetFloat("xVelocity",Math.Abs(body.velocity.x));
         animator.SetFloat("yVelocity", body.velocity.y);
     }
 
-    void CheckGround()
-    {
-        grounded = Physics2D.OverlapAreaAll(groundCheck.bounds.min, groundCheck.bounds.max, groundMask).Length > 0;
-        //grounded = false;
-        animator.SetBool("isJumping", !grounded);
-    }
-
-    void GetInput()
+    void CheckInput()
     {
         xInput = Input.GetAxis("Horizontal");
         yInput = Input.GetAxis("Vertical");
     }
-
-    void MoveWithInput()
+    void HandleXMovement()
     {
         Debug.Log("MoveWithInput");
         if (Mathf.Abs(xInput) > 0)
         {
-            //float increment = xInput * acceleration;
-            //float newSpeed = Mathf.Clamp(body.velocity.x + increment, -groundSpeed, groundSpeed);
-            //body.velocity = new Vector2(newSpeed, body.velocity.y);
+            float increment = xInput * acceleration;
+            float newSpeed = Mathf.Clamp(body.velocity.x + increment, -groundSpeed, groundSpeed);
+            body.velocity = new Vector2(newSpeed, body.velocity.y);
 
-            body.velocity = new Vector2(xInput * groundSpeed, body.velocity.y);//.normalized;
+            //body.velocity = new Vector2(xInput * groundSpeed, body.velocity.y);//.normalized;
 
-            float direction = Mathf.Sign(xInput);// + / -
-            transform.localScale = new Vector3(direction, 1, 1);
+            FaceInput();
+            
         }
         else
         {
             body.velocity = new Vector2(0, body.velocity.y);
         }
+    }
+
+    void FaceInput()
+    {
+        float direction = Mathf.Sign(xInput);// + / -
+        transform.localScale = new Vector3(direction, 1, 1);
     }
 
     void HandleJump()
@@ -90,7 +98,15 @@ public class PlayerMovement : MonoBehaviour
         {
             //body.velocity = new Vector2(body.velocity.x, yInput * jumpSpeed);//.normalized;
             body.velocity = new Vector2(body.velocity.x, jumpSpeed);//.normalized;
+            //animator.SetBool("isJumping", !grounded);
         }
+    }
+
+    void CheckGround()
+    { 
+        grounded = Physics2D.OverlapAreaAll(groundCheck.bounds.min, groundCheck.bounds.max, groundMask).Length > 0;
+        //grounded = false;
+        animator.SetBool("isJumping", !grounded);
     }
     void ApplyFriction()
     {
@@ -101,4 +117,27 @@ public class PlayerMovement : MonoBehaviour
         }
 
     }
+
+
+
+    /*HEALT*/
+    private void startHealt()
+    {
+        healt = healtMAX;
+        //Debug.Log("1OXY " + oxygen);
+        //barOxyController.InicializarBarraDeVida(healt);
+    }
+    /*
+    public void repair()
+    {
+        Debug.Log("Repair ship mass: " + mass);
+        if ((mass - 1) >= 0 && mass < massMAX) //()
+        {
+            //[0] -> [3]
+            shields[mass - 1].gameObject.SetActive(true);
+            Debug.Log(shields[mass - 1].gameObject.name);
+            mass++;
+        }
+    }
+    */
 }
