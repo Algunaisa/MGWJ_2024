@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5545304567897757241}
   - component: {fileID: 5277161375860318652}
   - component: {fileID: 2704162437081535423}
+  - component: {fileID: 4292425885995996661}
   m_Layer: 6
   m_Name: Player
   m_TagString: Untagged
@@ -89,6 +90,24 @@ MonoBehaviour:
   animator: {fileID: 4689911242320569758}
   healt: 0
   healtMAX: 0
+--- !u!114 &4292425885995996661
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 536022394813719993}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d348f4976507f3a468d45da320f3da63, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inCave: 0
+  health: 0
+  maxHealth: 0
+  healthDownHeat: 0
+  healthDownDamage: 0
+  healthBarController: {fileID: 0}
 --- !u!1 &3586945531304607137
 GameObject:
   m_ObjectHideFlags: 0
