@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sprite: {fileID: 2092467219, guid: 65335a50ba2f71749b0c95d33e7b88e6, type: 3}
   description: Una armadura barata
-  value: 10
+  value: -300

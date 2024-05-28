@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sprite: {fileID: 1168285780, guid: 65335a50ba2f71749b0c95d33e7b88e6, type: 3}
   description: Un poco de aguita
-  value: 10
+  value: 200

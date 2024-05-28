@@ -103,8 +103,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inCave: 0
-  health: 0
-  maxHealth: 0
+  health: 1000
+  maxHealth: 1000
   healthDownHeat: 0
   healthDownDamage: 0
   healthBarController: {fileID: 0}

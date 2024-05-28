@@ -46,5 +46,10 @@ public class PlayerHealth : MonoBehaviour
 
         healthBarController.ChangeActualHealth(health);
     }
-
+    public void OnPlayerHealthChange(float somehealth)
+    {
+        health = (health + somehealth <= maxHealth) ? health + somehealth : maxHealth;
+        healthBarController.ChangeActualHealth(health);
+    }
+    
 }
