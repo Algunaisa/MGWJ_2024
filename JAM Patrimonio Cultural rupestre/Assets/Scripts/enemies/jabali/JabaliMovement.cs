@@ -7,6 +7,7 @@ using UnityEditor.Experimental.GraphView;
 public class JabaliMovement : MonoBehaviour
 {
     public float groundSpeed;
+    public float hornDamage;
     public Rigidbody2D body;
     // public  Action<Vector2> OnWalkTrigger;
     public  Action OnWalkTrigger;
@@ -62,6 +63,10 @@ public class JabaliMovement : MonoBehaviour
     void OnCollisionEnter2D(Collision2D other)
     {
         grounded = true;
+        if (other.gameObject.CompareTag("Player")){
+            Debug.Log("JUGADOr metiche");
+            other.gameObject.GetComponent<PlayerHealth>().OnPlayerHealthChange(hornDamage);
+        }
     }
     void OnCollisionExit2D(Collision2D other)
     {

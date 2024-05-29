@@ -77,9 +77,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65e1bc9bd7b445051842dd0541c103c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  acceleration: 1
   groundSpeed: 2
-  jumpSpeed: 7
+  hornDamage: -300
   body: {fileID: 7275384018038480344}
 --- !u!61 &1962554960926685684
 BoxCollider2D:
