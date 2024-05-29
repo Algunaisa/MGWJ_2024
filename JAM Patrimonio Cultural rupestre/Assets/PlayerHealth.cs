@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -9,6 +10,7 @@ public class PlayerHealth : MonoBehaviour
     public float maxHealth;
     public int healthDownHeat;
     public int healthDownDamage;
+    public event Action onPlayerDeath;
 
     public HealthBarController healthBarController;
     private void Awake()
@@ -25,6 +27,7 @@ public class PlayerHealth : MonoBehaviour
     {
         health = maxHealth;
         healthBarController.startHealthBar(health);
+        onPlayerDeath = OnPlayerDeath;
     }
     private void Update()
     {
@@ -42,6 +45,7 @@ public class PlayerHealth : MonoBehaviour
         {
             Debug.Log("Game Over, No Health");
             Start();
+            onPlayerDeath.Invoke();
         }
 
         healthBarController.ChangeActualHealth(health);
@@ -51,5 +55,7 @@ public class PlayerHealth : MonoBehaviour
         health = (health + somehealth <= maxHealth) ? health + somehealth : maxHealth;
         healthBarController.ChangeActualHealth(health);
     }
-    
+    public void OnPlayerDeath(){
+        Debug.Log("Player murio!");
+    }
 }
