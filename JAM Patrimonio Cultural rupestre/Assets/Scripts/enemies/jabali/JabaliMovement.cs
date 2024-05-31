@@ -1,45 +1,65 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using System;
-using UnityEditor.Experimental.GraphView;
 // FIXME varios jabalies sobre una linea no saben que hacer XD
 public class JabaliMovement : MonoBehaviour
 {
     public float groundSpeed;
     public float hornDamage;
     public Rigidbody2D body;
+    private Animator animator;
     // public  Action<Vector2> OnWalkTrigger;
-    public  Action OnWalkTrigger;
+    public Action OnWalkTrigger;
+    public Action<bool> OnGroundTrigger;
 
     private Vector2 direction = Vector2.right;
-    // private List<float> limits = new List<float>();
     private IEnumerator coroutine;
     private bool grounded;
     private bool eating = false;
+    const string JABALI_IDLE = "jabali_idle";
+    const string JABALI_WALK = "jabali_walk";
+    private string currentState = JABALI_IDLE;
+    private float eatTime = -1;
+
 
     void Start()
     {
         OnWalkTrigger = ChangeDirection2;
-        float waitTime = UnityEngine.Random.Range(1,3);
-        coroutine = EatSomething(waitTime);
+        OnGroundTrigger = OnGround;
+        coroutine = GoToWalk();
         StartCoroutine(coroutine);
+        animator = GetComponent<Animator>();
     }
 
-    private IEnumerator EatSomething(float waitTime){
-        while(true){
-            yield return new WaitForSeconds(waitTime);
-            // Debug.Log("Eating something");
-            eating = !eating;
+    private IEnumerator GoToWalk()
+    {
+        while (true)
+        {
+            if (eating)
+            {
+                yield return new WaitForSeconds(eatTime);
+                eating = false;
+            }
+            else
+            {
+                yield return new WaitForSeconds(
+                    UnityEngine.Random.Range(3, 9)
+                );
+                eating = true;
+            }
         }
     }
+    private void OnGround(bool ground)
+    {
+        grounded = ground;
+    }
 
-    public void ChangeDirection2(){
+    public void ChangeDirection2()
+    {
         if (direction == Vector2.right) direction = Vector2.left;
         else direction = Vector2.right;
 
         // FIXME el jabali quiere caerse estando sobre el suelo, tiene miedo y se da la vuelta xD
-        // Porque se tambalea, algo le pasa con el tilemap?
         Vector2 locesc = transform.localScale;
         locesc.x *= -1;
         transform.localScale = locesc;
@@ -62,20 +82,38 @@ public class JabaliMovement : MonoBehaviour
     }
     void OnCollisionEnter2D(Collision2D other)
     {
-        grounded = true;
-        if (other.gameObject.CompareTag("Player")){
+        if (other.gameObject.CompareTag("Player"))
+        {
             Debug.Log("JUGADOr metiche");
             other.gameObject.GetComponent<PlayerHealth>().OnPlayerHealthChange(hornDamage);
         }
     }
-    void OnCollisionExit2D(Collision2D other)
+    void MoveWithAI()
     {
-        grounded = false;
-    }
-    void MoveWithAI(){
-        if (grounded){
-            if (eating) body.velocity = Vector2.zero;
-            else body.velocity = direction * groundSpeed;
+        if (grounded)
+        {
+            if (eating)
+            {
+                body.velocity = Vector2.zero;
+                ChangeAnimationState(JABALI_IDLE);
+            }
+            else
+            {
+                ChangeAnimationState(JABALI_WALK);
+                body.velocity = direction * groundSpeed;
+            }
         }
+    }
+
+    void ChangeAnimationState(string newstate)
+    {
+        if (currentState == newstate) return;
+
+        if (eatTime < 0 && newstate == JABALI_WALK)
+        {
+            eatTime = animator.GetCurrentAnimatorStateInfo(0).length;
+        }
+        animator.Play(newstate);
+        currentState = newstate;
     }
 }
