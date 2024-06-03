@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: b2483c2fc4ccef037b1bf193719d8b5d
+guid: fe26dc3077751643c8a7239e1a926517
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -110,11 +110,11 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: jabali_0
+      name: jabali-Sheet_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 24
+        y: 48
         width: 24
         height: 24
       alignment: 0
@@ -124,18 +124,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 93679e86e197eb614875d0e6a6195cfb
-      internalID: 1585858581
+      spriteID: b4c1c60bae24d4ad39195b1cc2d0e1b5
+      internalID: 1827288550
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: jabali_1
+      name: jabali-Sheet_1
       rect:
         serializedVersion: 2
         x: 24
-        y: 24
+        y: 48
         width: 24
         height: 24
       alignment: 0
@@ -145,18 +145,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5106ebc951c8d2973834e9d7b13c34ee
-      internalID: 647841616
+      spriteID: 04cc04b80d59aab3fb4a8f65164b42df
+      internalID: -186783806
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: jabali_2
+      name: jabali-Sheet_2
       rect:
         serializedVersion: 2
         x: 48
-        y: 24
+        y: 48
         width: 24
         height: 24
       alignment: 0
@@ -166,18 +166,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e08a2918d01dac49c8e13cb14bd586be
-      internalID: -281156381
+      spriteID: 9454b807d9a50ef128adcac8a80f3f45
+      internalID: -1894310648
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: jabali_3
+      name: jabali-Sheet_3
       rect:
         serializedVersion: 2
         x: 72
-        y: 24
+        y: 48
         width: 24
         height: 24
       alignment: 0
@@ -187,18 +187,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f0a4eaffe4eae2d3992e81e33dd94379
-      internalID: 429683747
+      spriteID: 056587e70bfd153629361c980c5ad724
+      internalID: -515275830
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: jabali_4
+      name: jabali-Sheet_4
       rect:
         serializedVersion: 2
         x: 96
-        y: 24
+        y: 48
         width: 24
         height: 24
       alignment: 0
@@ -208,123 +208,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 803474a10d2c35259a8e0abab4229489
-      internalID: 1676910070
+      spriteID: 901bb0ef72d5a431fa3771198279bee3
+      internalID: -1547961879
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: jabali_5
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 24
-        height: 24
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 94d6638bddd7fb4738434f8dc2e0e790
-      internalID: 244939875
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: jabali_6
-      rect:
-        serializedVersion: 2
-        x: 24
-        y: 0
-        width: 24
-        height: 24
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f6679220262b7fd83bbdad4fa24ac2d0
-      internalID: 578320972
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: jabali_7
-      rect:
-        serializedVersion: 2
-        x: 48
-        y: 0
-        width: 24
-        height: 24
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ee13ff441bffba47497bc865b9449ee3
-      internalID: 681881784
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: jabali_8
-      rect:
-        serializedVersion: 2
-        x: 72
-        y: 0
-        width: 24
-        height: 24
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9e274238b434958a3817a5b9fa333efe
-      internalID: -691906194
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: jabali_9
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 0
-        width: 24
-        height: 24
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 087a0ff4e26f1dd2ebe4d45637775c39
-      internalID: -1503737797
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: jabali_10
+      name: jabali-Sheet_5
       rect:
         serializedVersion: 2
         x: 120
-        y: 0
+        y: 48
         width: 24
         height: 24
       alignment: 0
@@ -334,18 +229,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c2e03c95cb3e10bfc9e7234f641f4fc4
-      internalID: -1712132822
+      spriteID: 50aebcd9eff392cdf93af86f1383fb49
+      internalID: 1029048333
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: jabali_11
+      name: jabali-Sheet_6
       rect:
         serializedVersion: 2
         x: 144
-        y: 0
+        y: 48
         width: 24
         height: 24
       alignment: 0
@@ -355,17 +250,143 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a94270d058a3fe9fabb784e9437ddd57
-      internalID: -561788503
+      spriteID: 16376e65c8065a3ccb4b9b84a237aa52
+      internalID: -1324578377
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: jabali_12
+      name: jabali-Sheet_7
       rect:
         serializedVersion: 2
         x: 168
+        y: 48
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58172b04f18dbf8a8a5826d2d40972b5
+      internalID: -1856928805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jabali-Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 24
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5fcfac883d6f78efea163f7c5642130a
+      internalID: -82080927
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jabali-Sheet_9
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 24
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c943cf7789133ebeb5e592e547eeabc
+      internalID: -1312563938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jabali-Sheet_10
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 24
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: baa264ea5c1ef988dbb5c65ca9814497
+      internalID: 618170057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jabali-Sheet_11
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 24
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6678c6eeb23e2195922836300c61ef6
+      internalID: 1892239464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jabali-Sheet_12
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 24
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2d0539dcc320c88c8afc10088cf51cb
+      internalID: -1874885151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jabali-Sheet_13
+      rect:
+        serializedVersion: 2
+        x: 0
         y: 0
         width: 24
         height: 24
@@ -376,8 +397,71 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1ee0ac14f4f2171c0bf0f3c147f10c78
-      internalID: -1918293386
+      spriteID: 242d83dca665f6441ba0643ad6354a0b
+      internalID: 441288224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jabali-Sheet_14
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 0
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9fd250bb5f0e7e58ab5636610636ec48
+      internalID: -1705302462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jabali-Sheet_15
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 0
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ecf6361e965c6cac9abd21aa781f065
+      internalID: 2090828313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jabali-Sheet_16
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 0
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a871f77fd57796936b5da55ff6fc8bbd
+      internalID: -126904242
       vertices: []
       indices: 
       edges: []
@@ -393,19 +477,23 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      jabali_0: 1585858581
-      jabali_1: 647841616
-      jabali_10: -1712132822
-      jabali_11: -561788503
-      jabali_12: -1918293386
-      jabali_2: -281156381
-      jabali_3: 429683747
-      jabali_4: 1676910070
-      jabali_5: 244939875
-      jabali_6: 578320972
-      jabali_7: 681881784
-      jabali_8: -691906194
-      jabali_9: -1503737797
+      jabali-Sheet_0: 1827288550
+      jabali-Sheet_1: -186783806
+      jabali-Sheet_10: 618170057
+      jabali-Sheet_11: 1892239464
+      jabali-Sheet_12: -1874885151
+      jabali-Sheet_13: 441288224
+      jabali-Sheet_14: -1705302462
+      jabali-Sheet_15: 2090828313
+      jabali-Sheet_16: -126904242
+      jabali-Sheet_2: -1894310648
+      jabali-Sheet_3: -515275830
+      jabali-Sheet_4: -1547961879
+      jabali-Sheet_5: 1029048333
+      jabali-Sheet_6: -1324578377
+      jabali-Sheet_7: -1856928805
+      jabali-Sheet_8: -82080927
+      jabali-Sheet_9: -1312563938
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
