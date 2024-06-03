@@ -14,6 +14,9 @@ public class WallTrigger : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        GetComponentInParent<JabaliMovement>().OnWalkTrigger?.Invoke();
+        if (other.gameObject.CompareTag("Ground"))
+        {
+            GetComponentInParent<JabaliMovement>().OnWalkTrigger?.Invoke();
+        }
     }
 }
