@@ -13125,17 +13125,9 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 685427421899987970, guid: 0f8eb75ce5e4e0e9192b7313e08a944c, type: 3}
-      propertyPath: m_ScreenMatchMode
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 4571720677896290399, guid: 0f8eb75ce5e4e0e9192b7313e08a944c, type: 3}
       propertyPath: m_Name
       value: CanvasHealthBar
-      objectReference: {fileID: 0}
-    - target: {fileID: 4571720677896290399, guid: 0f8eb75ce5e4e0e9192b7313e08a944c, type: 3}
-      propertyPath: m_Layer
-      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7979167344277192550, guid: 0f8eb75ce5e4e0e9192b7313e08a944c, type: 3}
       propertyPath: m_Pivot.x
