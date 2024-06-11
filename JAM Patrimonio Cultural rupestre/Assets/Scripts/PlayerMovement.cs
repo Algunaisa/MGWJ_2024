@@ -19,7 +19,7 @@ public class PlayerMovement : MonoBehaviour
     float xInput;
     float yInput;
 
-    public BoxCollider2D groundCheck;
+    public BoxCollider2D colliderCheck;
     public LayerMask groundMask;
 
     public bool grounded;
@@ -28,6 +28,13 @@ public class PlayerMovement : MonoBehaviour
 
     public float healt;
     public float healtMAX;
+
+    [Header("Escalar")]
+    [SerializeField] private float velocidadEscalar;
+    //public BoxCollider2D climbCheck;
+    private float gravedadInicial;
+    private bool escalando;
+
     // Start is called before the first frame update
     private void Awake()
     {
@@ -36,6 +43,7 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {
         //body = GetComponent<Rigidbody2D>();
+        gravedadInicial = body.gravityScale; 
     }
 
     // Update is called once per frame
@@ -44,7 +52,7 @@ public class PlayerMovement : MonoBehaviour
         CheckInput();
         HandleJump();
 
-
+        checkClimb();
         //Vector2 direction = new Vector2(xInput, 0).normalized;
         //body.velocity = direction * speed;
     }
@@ -104,7 +112,7 @@ public class PlayerMovement : MonoBehaviour
 
     void CheckGround()
     { 
-        grounded = Physics2D.OverlapAreaAll(groundCheck.bounds.min, groundCheck.bounds.max, groundMask).Length > 0;
+        grounded = Physics2D.OverlapAreaAll(colliderCheck.bounds.min, colliderCheck.bounds.max, groundMask).Length > 0;
         //grounded = false;
         animator.SetBool("isJumping", !grounded);
     }
@@ -118,7 +126,28 @@ public class PlayerMovement : MonoBehaviour
 
     }
 
+    void checkClimb()
+    {
+        if((yInput != 0 || escalando) && (colliderCheck.IsTouchingLayers(LayerMask.GetMask("Escaleras"))))
+        {
+            Vector2 velocidadSubida = new Vector2(body.velocity.x, yInput * velocidadEscalar);
+            body.velocity = velocidadSubida;
+            //Debug.Log("Check Climb " + velocidadSubida);
+            body.gravityScale = 0;
+            escalando = true;
+        }
+        else
+        {
+            //Debug.Log("yInput: " + yInput);
+            body.gravityScale = gravedadInicial;
+            escalando = false;
+        }
 
+        if(grounded)
+        {
+            escalando = false;
+        }
+    }
 
     /*HEALT*/
     private void startHealt()
