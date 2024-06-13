@@ -8,7 +8,8 @@ public class BagManager : MonoBehaviour
     public static BagManager Instance;
     public List<Item> items;
     public Transform bagContainer;
-    public GameObject bagItem;
+    [SerializeField] private GameObject bagItem;
+    [SerializeField] private GameObject itemTemplate;
 
     private void Awake()
     {
@@ -25,6 +26,22 @@ public class BagManager : MonoBehaviour
     {
         items.Remove(item);
         if (gameObject.activeSelf) ListItems();
+    }
+
+    public GameObject DroppableItemBag(Vector3 transform)
+    {
+        foreach (Item item in items)
+        {
+            if (item.droppable)
+            {
+                GameObject itemDrop = Instantiate(itemTemplate, transform, Quaternion.identity);
+                ItemController contr = itemDrop.GetComponent<ItemController>();
+                contr.ChangeItem(item);
+                RemoveItem(item);
+                return itemDrop;
+            }
+        }
+        return null;
     }
 
     public void ListItems()

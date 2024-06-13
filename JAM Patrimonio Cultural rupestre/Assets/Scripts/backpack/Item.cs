@@ -9,5 +9,6 @@ public class Item : ScriptableObject
     public string description;
     public float value;
     public enum ItemType { Consumible, Rupestre };
+    public bool droppable;
     public ItemType itemType;
 }
