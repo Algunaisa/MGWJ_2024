@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5277161375860318652}
   - component: {fileID: 2704162437081535423}
   - component: {fileID: 4292425885995996661}
+  - component: {fileID: 8733075643540655336}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -82,7 +83,7 @@ MonoBehaviour:
   jumpSpeed: 8
   groundDecay: 0
   body: {fileID: 5277161375860318652}
-  groundCheck: {fileID: 3917498946228542566}
+  colliderCheck: {fileID: 3917498946228542566}
   groundMask:
     serializedVersion: 2
     m_Bits: 128
@@ -91,7 +92,6 @@ MonoBehaviour:
   healt: 0
   healtMAX: 0
   velocidadEscalar: 5
-  climbCheck: {fileID: 1656097851740902938, guid: 098f486f4012f6a4f8e3731d64d99a2a, type: 3}
 --- !u!114 &4292425885995996661
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -110,6 +110,18 @@ MonoBehaviour:
   healthDownHeat: 0
   healthDownDamage: 0
   healthBarController: {fileID: 0}
+--- !u!114 &8733075643540655336
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 536022394813719993}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64db01ae1e4f18028ba3bab8ab3ecaab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3586945531304607137
 GameObject:
   m_ObjectHideFlags: 0
@@ -199,7 +211,7 @@ GameObject:
   - component: {fileID: 3917498946228542566}
   m_Layer: 6
   m_Name: GoundCheck
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -276,7 +288,7 @@ GameObject:
   - component: {fileID: 2670537113500522583}
   m_Layer: 6
   m_Name: Sprite
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -361,7 +373,7 @@ GameObject:
   - component: {fileID: 4689911242320569758}
   m_Layer: 0
   m_Name: Anim
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

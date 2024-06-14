@@ -26,6 +26,7 @@ Una restaudarora debe sortear diferentes dificultades para encontrar indicios de
 | D          | Derecha          |
 | SPACE BAR  | Saltar           |
 | W          | Saltar           |
+| P          | Soltar comida    |
 
 ### 2. Basic Gameplay
 
