@@ -1,8 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEditor.UI;
 using UnityEngine;
-using UnityEngine.UIElements;
 
 public class ItemController : MonoBehaviour
 {
@@ -23,7 +19,8 @@ public class ItemController : MonoBehaviour
     {
         DropDown();
     }
-    void DropDown(){
+    void DropDown()
+    {
         if (!dropdown) return;
         if (rb == null) return;
         rb.velocity += gravity * Time.fixedDeltaTime * Vector2.down;
@@ -31,15 +28,23 @@ public class ItemController : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (dropdown && other.gameObject.CompareTag("Ground")){
+        if (dropdown && other.gameObject.CompareTag("Ground"))
+        {
             dropdown = false;
             rb.velocity = Vector2.zero;
         }
         // FIXME cada collider agrega un item, antes de que se destruya. 
         // Diferenciar colliders con tagnames?
-        if (other.CompareTag("Player")){
+        if (other.CompareTag("Player"))
+        {
             Debug.Log(itemData.description);
             BagManager.Instance.AddItem(itemData);
+            Destroy(gameObject);
+        }
+        if (other.CompareTag("Enemy"))
+        {
+            JabaliMovement jm = other.gameObject.GetComponent<JabaliMovement>();
+            jm.FromAnyStateToEat();
             Destroy(gameObject);
         }
     }
