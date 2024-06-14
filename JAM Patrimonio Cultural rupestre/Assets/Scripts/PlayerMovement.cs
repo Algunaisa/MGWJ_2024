@@ -34,6 +34,9 @@ public class PlayerMovement : MonoBehaviour
     public float gravedadInicial;
     public bool escalando;
 
+    private float direction = 1f;
+    public Vector3 faceDirection {get{return direction * Vector3.right;}}
+
     // Start is called before the first frame update
     private void Awake()
     {
@@ -93,7 +96,7 @@ public class PlayerMovement : MonoBehaviour
 
     void FaceInput()
     {
-        float direction = Mathf.Sign(xInput);// + / -
+        direction = Mathf.Sign(xInput);// + / -
         transform.localScale = new Vector3(direction, 1, 1);
     }
 

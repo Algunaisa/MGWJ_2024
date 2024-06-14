@@ -47,3 +47,4 @@ MonoBehaviour:
   items: []
   bagContainer: {fileID: 0}
   bagItem: {fileID: 8165130249180419841, guid: 3cc6d5a85663d3db38535b661ab40d1f, type: 3}
+  itemTemplate: {fileID: 6127162840728515369, guid: 90a33ce61ba7f5c86858508af7134a0d, type: 3}

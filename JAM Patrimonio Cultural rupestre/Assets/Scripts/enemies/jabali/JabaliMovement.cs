@@ -18,14 +18,18 @@ public class JabaliMovement : MonoBehaviour
     private Vector3 direction = Vector3.right;
     private IEnumerator coroutine;
     private IEnumerator atackCoroutine;
+    private IEnumerator eatCoroutine;
     private bool grounded;
+    private bool relax = false;
     private bool eating = false;
     private bool isSearching = true;
     const string JABALI_IDLE = "jabali_idle";
     const string JABALI_WALK = "jabali_walk";
     const string JABALI_ATACK = "jabali_atack";
+    const string JABALI_EAT = "jabali_eat";
     private string currentState = JABALI_IDLE;
-    private float eatTime = -1;
+    private float relaxTime = -1;
+    [SerializeField] private float eatTime = 4f;
 
 
     void Start()
@@ -35,26 +39,39 @@ public class JabaliMovement : MonoBehaviour
         OnGroundTrigger = OnGround;
         coroutine = GoToWalk();
         atackCoroutine = GoToAtack();
+        eatCoroutine = EatTime();
         StartCoroutine(coroutine);
         StartCoroutine(atackCoroutine);
+        StartCoroutine(eatCoroutine);
         animator = GetComponent<Animator>();
+    }
+
+    private IEnumerator EatTime()
+    {
+        while (true)
+        {
+            if (!eating) yield return null;
+            yield return new WaitForSeconds(eatTime);
+            eating = false;
+        }
     }
 
     private IEnumerator GoToWalk()
     {
         while (true)
         {
-            if (eating)
+            if (eating) yield return null;
+            if (relax)
             {
-                yield return new WaitForSeconds(eatTime);
-                eating = false;
+                yield return new WaitForSeconds(relaxTime);
+                relax = false;
             }
             else
             {
                 yield return new WaitForSeconds(
                     UnityEngine.Random.Range(3, 9)
                 );
-                eating = true;
+                relax = true;
             }
         }
     }
@@ -62,6 +79,7 @@ public class JabaliMovement : MonoBehaviour
     {
         while (true)
         {
+            if (eating) yield return null;
             if (!isSearching)
             {
                 yield return new WaitForSeconds(2f);
@@ -113,9 +131,14 @@ public class JabaliMovement : MonoBehaviour
     {
         if (grounded)
         {
-            if (isSearching)
+            if (eating)
             {
-                if (eating)
+                body.velocity = Vector2.zero;
+                ChangeAnimationState(JABALI_EAT);
+            }
+            else if (isSearching)
+            {
+                if (relax)
                 {
                     body.velocity = Vector2.zero;
                     ChangeAnimationState(JABALI_IDLE);
@@ -159,11 +182,15 @@ public class JabaliMovement : MonoBehaviour
     {
         if (currentState == newstate) return;
 
-        if (eatTime < 0 && newstate == JABALI_WALK)
+        if (relaxTime < 0 && newstate == JABALI_WALK)
         {
-            eatTime = animator.GetCurrentAnimatorStateInfo(0).length;
+            relaxTime = animator.GetCurrentAnimatorStateInfo(0).length;
         }
         animator.Play(newstate);
         currentState = newstate;
+    }
+    public void FromAnyStateToEat()
+    {
+        eating = true;
     }
 }
