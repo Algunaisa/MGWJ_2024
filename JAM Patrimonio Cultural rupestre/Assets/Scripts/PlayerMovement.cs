@@ -7,6 +7,7 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     enum PlayerState { Idle, Running, Airborne }
+    [Header("Movimiento")]
     public float acceleration;
 
     public float groundSpeed;
@@ -26,19 +27,16 @@ public class PlayerMovement : MonoBehaviour
 
     public Animator animator;
 
-    public float healt;
-    public float healtMAX;
 
     [Header("Escalar")]
     [SerializeField] private float velocidadEscalar;
     //public BoxCollider2D climbCheck;
-    private float gravedadInicial;
-    private bool escalando;
+    public float gravedadInicial;
+    public bool escalando;
 
     // Start is called before the first frame update
     private void Awake()
     {
-        healtMAX = 1000;
     }
     void Start()
     {
@@ -52,7 +50,7 @@ public class PlayerMovement : MonoBehaviour
         CheckInput();
         HandleJump();
 
-        checkClimb();
+        HandleClimb();
         //Vector2 direction = new Vector2(xInput, 0).normalized;
         //body.velocity = direction * speed;
     }
@@ -64,7 +62,7 @@ public class PlayerMovement : MonoBehaviour
         HandleXMovement();
         ApplyFriction();
 
-        animator.SetFloat("xVelocity",Math.Abs(body.velocity.x));
+        animator.SetFloat("xVelocity", Math.Abs(body.velocity.x));
         animator.SetFloat("yVelocity", body.velocity.y);
     }
 
@@ -126,7 +124,7 @@ public class PlayerMovement : MonoBehaviour
 
     }
 
-    void checkClimb()
+    void HandleClimb()
     {
         if((yInput != 0 || escalando) && (colliderCheck.IsTouchingLayers(LayerMask.GetMask("Escaleras"))))
         {
@@ -147,26 +145,8 @@ public class PlayerMovement : MonoBehaviour
         {
             escalando = false;
         }
+
+        animator.SetBool("isClimbing", escalando);
     }
 
-    /*HEALT*/
-    private void startHealt()
-    {
-        healt = healtMAX;
-        //Debug.Log("1OXY " + oxygen);
-        //barOxyController.InicializarBarraDeVida(healt);
-    }
-    /*
-    public void repair()
-    {
-        Debug.Log("Repair ship mass: " + mass);
-        if ((mass - 1) >= 0 && mass < massMAX) //()
-        {
-            //[0] -> [3]
-            shields[mass - 1].gameObject.SetActive(true);
-            Debug.Log(shields[mass - 1].gameObject.name);
-            mass++;
-        }
-    }
-    */
 }
