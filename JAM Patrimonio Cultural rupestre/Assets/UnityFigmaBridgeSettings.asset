@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DocumentUrl: https://www.figma.com/file/w7IhNkMEeuPZ7aE9qfj6Tm/Rupestralia?node-id=0-1
   BuildPrototypeFlow: 1
-  RunTimeAssetsScenePath: 
+  RunTimeAssetsScenePath: Assets/Scenes/GameMenu.unity
   EnableAutoLayout: 0
   ScreenBindingNamespace: 
   ServerRenderImageScale: 3
