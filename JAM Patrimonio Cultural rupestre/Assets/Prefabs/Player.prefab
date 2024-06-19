@@ -83,15 +83,17 @@ MonoBehaviour:
   jumpSpeed: 8
   groundDecay: 0
   body: {fileID: 5277161375860318652}
-  colliderCheck: {fileID: 3917498946228542566}
+  groundCheck: {fileID: 3917498946228542566}
   groundMask:
     serializedVersion: 2
     m_Bits: 128
   grounded: 0
   animator: {fileID: 4689911242320569758}
-  healt: 0
-  healtMAX: 0
   velocidadEscalar: 5
+  climbCheck: {fileID: 415306135715343190}
+  gravedadInicial: 0
+  escalando: 0
+  direction: 1
 --- !u!114 &4292425885995996661
 MonoBehaviour:
   m_ObjectHideFlags: 0

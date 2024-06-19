@@ -20,9 +20,8 @@ public class PlayerMovement : MonoBehaviour
     float xInput;
     float yInput;
 
-    public BoxCollider2D colliderCheck;
+    public BoxCollider2D groundCheck;
     public LayerMask groundMask;
-
     public bool grounded;
 
     public Animator animator;
@@ -30,12 +29,16 @@ public class PlayerMovement : MonoBehaviour
 
     [Header("Escalar")]
     [SerializeField] private float velocidadEscalar;
-    //public BoxCollider2D climbCheck;
+    public BoxCollider2D climbCheck;
+//<<<<<<< HEAD
     public float gravedadInicial;
     public bool escalando;
-
-    private float direction = 1f;
+//=======
+    //private float gravedadInicial;
+    //private bool escalando;
+    public float direction = 1f;
     public Vector3 faceDirection {get{return direction * Vector3.right;}}
+//>>>>>>> a54d7e718d4ef5afb120208405b9029d2c32ca7a
 
     // Start is called before the first frame update
     private void Awake()
@@ -113,7 +116,7 @@ public class PlayerMovement : MonoBehaviour
 
     void CheckGround()
     { 
-        grounded = Physics2D.OverlapAreaAll(colliderCheck.bounds.min, colliderCheck.bounds.max, groundMask).Length > 0;
+        grounded = Physics2D.OverlapAreaAll(groundCheck.bounds.min, groundCheck.bounds.max, groundMask).Length > 0;
         //grounded = false;
         animator.SetBool("isJumping", !grounded);
     }
@@ -129,7 +132,7 @@ public class PlayerMovement : MonoBehaviour
 
     void HandleClimb()
     {
-        if((yInput != 0 || escalando) && (colliderCheck.IsTouchingLayers(LayerMask.GetMask("Escaleras"))))
+        if((yInput != 0 || escalando) && (climbCheck.IsTouchingLayers(LayerMask.GetMask("Escaleras"))))
         {
             Vector2 velocidadSubida = new Vector2(body.velocity.x, yInput * velocidadEscalar);
             body.velocity = velocidadSubida;
@@ -150,6 +153,8 @@ public class PlayerMovement : MonoBehaviour
         }
 
         animator.SetBool("isClimbing", escalando);
+
+        Debug.Log("ClimbAnim " + animator.GetBool("isClimbing"));
     }
 
 }
