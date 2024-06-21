@@ -45,5 +45,12 @@ public class BagItemController : MonoBehaviour
     {
         itemData = item;
     }
+    public Item.ItemType ItemType
+    {
+        get
+        {
+            return itemData.itemType;
+        }
+    }
 }
 
