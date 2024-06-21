@@ -45,7 +45,7 @@ public class Snake_script : MonoBehaviour
         }
         else
         {
-            animator.SetBool("Attack", true);
+            animator.SetBool("Attack", true); 
         }
     }
 }
