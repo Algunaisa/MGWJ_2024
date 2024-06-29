@@ -47,6 +47,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemData: {fileID: 11400000, guid: 082fa1188a6c790f1856f57dd7a37f45, type: 2}
+  dropdown: 0
 --- !u!61 &7033704710647456393
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -165,7 +166,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 440979147, guid: 65335a50ba2f71749b0c95d33e7b88e6, type: 3}
+  m_Sprite: {fileID: 959732457, guid: f95e11364a1ece3469828d3f5ca237cf, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
