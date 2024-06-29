@@ -109,7 +109,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: f3d9bfb2351beab4b995dddbab189662, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -138,6 +138,7 @@ MonoBehaviour:
   hornDamage: -300
   body: {fileID: 7275384018038480344}
   eyes: {fileID: 7912737686325145664}
+  eatTime: 4
 --- !u!95 &2744100617638668172
 Animator:
   serializedVersion: 5
@@ -191,8 +192,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_Size: {x: 1, y: 1}
+  m_Offset: {x: 0.011206627, y: -0.08591938}
+  m_Size: {x: 0.9028721, y: 0.9028721}
   m_Direction: 0
 --- !u!1 &1536516113250923457
 GameObject:
@@ -236,7 +237,7 @@ GameObject:
   - component: {fileID: 4385125952759069807}
   - component: {fileID: 9206600816419666062}
   - component: {fileID: 8074606988318307939}
-  m_Layer: 3
+  m_Layer: 7
   m_Name: WallTrigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -252,7 +253,7 @@ Transform:
   m_GameObject: {fileID: 2125499077246955221}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.03, y: 0.271, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
