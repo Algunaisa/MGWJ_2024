@@ -152,7 +152,7 @@ GameObject:
   - component: {fileID: 444200576}
   - component: {fileID: 444200578}
   m_Layer: 0
-  m_Name: GamePanel
+  m_Name: Panel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -230,7 +230,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0ac91b0ec5222ab0b490a4a09648121, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SceneNumberID: 3
 --- !u!1001 &587473286
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -17,8 +17,4 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Prototipo_Propuesta.unity
     guid: b017732a5b885a74f8d37b536d4fefec
-  - enabled: 1
-    path: Assets/Scenes/Rupestralia.unity
-    guid: a1681509ac4cf414e90c7f250dccf58a
->>>>>>> Stashed changes
   m_configObjects: {}
