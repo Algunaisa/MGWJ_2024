@@ -6,6 +6,7 @@ public class GameMenu : MonoBehaviour
     private Button bJugar;
     private Button bHistoria;
     private Button bSalir;
+    [SerializeField] private int LevelID = 3;
     void Awake()
     {
         bJugar = GameObject.Find("BJugar").GetComponent<Button>();
@@ -27,7 +28,7 @@ public class GameMenu : MonoBehaviour
     private void Jugar()
     {
         Debug.Log("Jugando");
-        SceneManager.LoadSceneAsync(2);
+        SceneManager.LoadSceneAsync(LevelID);
     }
 
     private void Historia()
@@ -37,9 +38,5 @@ public class GameMenu : MonoBehaviour
     private void Salir()
     {
         Debug.Log("Salir");
-    }
-    public void PlayGame()
-    {
-        SceneManager.LoadSceneAsync(2);
     }
 }
