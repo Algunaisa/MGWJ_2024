@@ -13,7 +13,9 @@ MonoBehaviour:
   m_Name: ArteRupestre3
   m_EditorClassIdentifier: 
   sprite: {fileID: 959732457, guid: f95e11364a1ece3469828d3f5ca237cf, type: 3}
-  description: Esta es la historia de la ULTIMA pintura faltante
+  description: "[3] Hay que recordar que hay rocas de muchos tama\xF1os de grano
+    y color por lo que no siempre es facil conseguir la misma textura ademas del
+    tono del resane al muro donde ir\xE1 colocado."
   value: 0
   droppable: 0
   itemType: 1

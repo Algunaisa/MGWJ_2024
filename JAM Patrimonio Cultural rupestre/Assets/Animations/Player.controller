@@ -329,7 +329,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 3877991870400410256}
+  m_Motion: {fileID: 7400000, guid: 092fcd289866ee54cb6b77ba8ba81eca, type: 2}
   m_Tag: 
   m_SpeedParameter: yVelocity
   m_MirrorParameter: isJumping
