@@ -20,8 +20,8 @@ public class Snake_script : MonoBehaviour
     private void Update()
     {
         Vector3 direction = PlayerMovement.transform.position - transform.position;//calcula la direccion de donde esta el jugador izq y der
-        if (direction.x >= 0.0f) transform.localScale = new Vector3(5.0f, 5.0f, 5.0f);
-        else transform.localScale = new Vector3(-5.0f, 5.0f, 0.0f);
+        if (direction.x >= 0.0f) transform.localScale = new Vector3(4.0f, 4.0f, 4.0f);
+        else transform.localScale = new Vector3(-4.0f, 4.0f, 0.0f);
         float distance = Mathf.Abs(PlayerMovement.transform.position.x - transform.position.x); //Obtiene la distancia entre el jugador y el enemigo
 
         if (distance <= detectionRange && Time.time > LastJump + 2.5f) //Compara la distancia 
