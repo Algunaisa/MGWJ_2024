@@ -50,6 +50,7 @@ public class PetrograbadoItem : MonoBehaviour, IPointerDownHandler
             petrograbadoUnlocked = true;
             StopCoroutine(coroutineColor);
             hoverSprite.color = Color.green;
+
             hoverGraffitiController.gameObject.SetActive(false);
             gameController.countRestaurado++;
 
