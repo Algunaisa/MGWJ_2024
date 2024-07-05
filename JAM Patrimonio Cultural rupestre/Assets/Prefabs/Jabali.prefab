@@ -134,7 +134,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   groundSpeed: 2
   atackSpeed: 5
-  searchDistance: 3
+  searchDistance: 6
   hornDamage: -300
   body: {fileID: 7275384018038480344}
   eyes: {fileID: 7912737686325145664}
