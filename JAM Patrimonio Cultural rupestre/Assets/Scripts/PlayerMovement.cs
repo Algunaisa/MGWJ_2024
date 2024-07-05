@@ -22,6 +22,7 @@ public class PlayerMovement : MonoBehaviour
 
     public BoxCollider2D groundCheck;
     public LayerMask groundMask;
+    public LayerMask enemyMask;
     public bool grounded;
 
     public Animator animator;
@@ -76,6 +77,7 @@ public class PlayerMovement : MonoBehaviour
     {
         xInput = Input.GetAxis("Horizontal");
         yInput = Input.GetAxis("Vertical");
+        Debug.Log("Vertical Input " + yInput);
     }
     void HandleXMovement()
     {
@@ -117,6 +119,10 @@ public class PlayerMovement : MonoBehaviour
     void CheckGround()
     { 
         grounded = Physics2D.OverlapAreaAll(groundCheck.bounds.min, groundCheck.bounds.max, groundMask).Length > 0;
+        if (!grounded) 
+        {
+            grounded = Physics2D.OverlapAreaAll(groundCheck.bounds.min, groundCheck.bounds.max, enemyMask).Length > 0; 
+        }
         //grounded = false;
         animator.SetBool("isJumping", !grounded);
     }

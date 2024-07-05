@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: ArteRupestre1
   m_EditorClassIdentifier: 
   sprite: {fileID: -320417829, guid: 65335a50ba2f71749b0c95d33e7b88e6, type: 3}
-  description: Esta es la historia de UNA de las piezas de arte rupestre
+  description: Esta es la historia de UNA de las pinturas rupestres
   value: 0
+  droppable: 0
   itemType: 1

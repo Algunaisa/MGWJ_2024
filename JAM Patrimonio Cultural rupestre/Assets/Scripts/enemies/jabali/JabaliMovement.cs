@@ -129,6 +129,7 @@ public class JabaliMovement : MonoBehaviour
     }
     void MoveWithAI()
     {
+        Debug.Log("J_grounded: " + grounded); 
         if (grounded)
         {
             if (eating)
