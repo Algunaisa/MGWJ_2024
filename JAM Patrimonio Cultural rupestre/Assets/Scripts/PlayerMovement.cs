@@ -25,6 +25,8 @@ public class PlayerMovement : MonoBehaviour
     public LayerMask enemyMask;
     public bool grounded;
 
+    public bool onPlay;
+
     public Animator animator;
 
 
@@ -48,20 +50,29 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {
         //body = GetComponent<Rigidbody2D>();
-        gravedadInicial = body.gravityScale; 
+        gravedadInicial = body.gravityScale;
+        onPlay = true;
     }
 
     // Update is called once per frame
     void Update()
     {
-        CheckInput();
-        HandleJump();
+        if (onPlay) 
+        {
 
-        HandleClimb();
+            CheckInput();
+            HandleJump();
+
+            HandleClimb();
+        }
+
         //Vector2 direction = new Vector2(xInput, 0).normalized;
         //body.velocity = direction * speed;
     }
-
+    public void playerOff()
+    {
+        onPlay=false;   
+    }
     void FixedUpdate()
     {
         CheckGround();

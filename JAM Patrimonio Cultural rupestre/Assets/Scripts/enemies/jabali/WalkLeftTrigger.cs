@@ -2,8 +2,10 @@ using UnityEngine;
 
 public class WalkLeftTrigger : MonoBehaviour
 {
+    JabaliMovement jabaliMovement;
     void Start()
     {
+        jabaliMovement = GetComponentInParent<JabaliMovement>();
     }
 
     void Update()
@@ -15,7 +17,8 @@ public class WalkLeftTrigger : MonoBehaviour
         // GetComponentInParent<JabaliMovement>().OnWalkTrigger?.Invoke(Vector2.left);
         if (other.gameObject.CompareTag("Ground"))
         {
-            GetComponentInParent<JabaliMovement>().OnWalkTrigger?.Invoke();
+            //GetComponentInParent<JabaliMovement>().OnWalkTrigger?.Invoke();
+            jabaliMovement.OnWalkTrigger?.Invoke();
         }
     }
 }

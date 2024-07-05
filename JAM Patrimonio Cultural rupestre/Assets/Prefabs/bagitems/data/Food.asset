@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a39d3bbc6f2c51a11a486c6151f0104c, type: 3}
   m_Name: Food
   m_EditorClassIdentifier: 
-  sprite: {fileID: -1970651261, guid: 1de8bbfd2f4f4274fbf8b02c9e346a4b, type: 3}
+  sprite: {fileID: 21300000, guid: 9a454366baf8009489aedcbedc851af7, type: 3}
   description: hambre?
   value: 100
   droppable: 1
