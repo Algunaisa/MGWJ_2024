@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a39d3bbc6f2c51a11a486c6151f0104c, type: 3}
   m_Name: ArteRupestre2
   m_EditorClassIdentifier: 
-  sprite: {fileID: -1055852595, guid: 65335a50ba2f71749b0c95d33e7b88e6, type: 3}
+  sprite: {fileID: 959732457, guid: f95e11364a1ece3469828d3f5ca237cf, type: 3}
   description: Esta es la historia de OTRA de las pinturas rupestres
   value: 0
   droppable: 0

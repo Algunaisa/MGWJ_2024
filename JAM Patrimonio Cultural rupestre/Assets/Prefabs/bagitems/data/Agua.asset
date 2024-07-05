@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a39d3bbc6f2c51a11a486c6151f0104c, type: 3}
   m_Name: Agua
   m_EditorClassIdentifier: 
-  sprite: {fileID: 1168285780, guid: 65335a50ba2f71749b0c95d33e7b88e6, type: 3}
+  sprite: {fileID: -347130266, guid: e6605f7f05337464ab5c5df2a349cbe7, type: 3}
   description: Un poco de aguita
   value: 200
+  droppable: 0
+  itemType: 0

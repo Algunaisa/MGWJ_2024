@@ -11,6 +11,7 @@ public class PlayerHealth : MonoBehaviour
     public int healthDownHeat;
     public int healthDownDamage;
     public event Action onPlayerDeath;
+    public GameOverScript gameOverScript;
 
     public HealthBarController healthBarController;
     private void Awake()
@@ -56,6 +57,7 @@ public class PlayerHealth : MonoBehaviour
         healthBarController.ChangeActualHealth(health);
     }
     public void OnPlayerDeath(){
+        gameOverScript.Setup();
         Debug.Log("Player murio!");
     }
 }
