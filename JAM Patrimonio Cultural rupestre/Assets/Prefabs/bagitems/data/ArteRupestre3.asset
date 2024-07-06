@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a39d3bbc6f2c51a11a486c6151f0104c, type: 3}
   m_Name: ArteRupestre3
   m_EditorClassIdentifier: 
-  sprite: {fileID: 959732457, guid: f95e11364a1ece3469828d3f5ca237cf, type: 3}
+  sprite: {fileID: 21300000, guid: 9504ddabad7dff74e8b4fe75f4bdde7b, type: 3}
   description: "[3] Hay que recordar que hay rocas de muchos tama\xF1os de grano
     y color por lo que no siempre es facil conseguir la misma textura ademas del
     tono del resane al muro donde ir\xE1 colocado."
