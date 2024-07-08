@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: ArteRupestre1
   m_EditorClassIdentifier: 
   sprite: {fileID: 959732457, guid: f95e11364a1ece3469828d3f5ca237cf, type: 3}
-  description: "[1] \"El patrimonio grafico rupestre son bienes muebles e inmuebles
+  description: "[1] \"El patrimonio gr\xE1fico rupestre son bienes muebles e inmuebles
     producto de culturas anteriores al establecimiento de la hisp\xE1nica en el territorio
     nacional, as\xED como los restos humanos, de la flora y de la fauna, relacionados
     con esas culturas\", (art\xEDculo 28).\"Son propiedad de la Naci\xF3n, inalienables
